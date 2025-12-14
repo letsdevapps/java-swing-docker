@@ -5,6 +5,14 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
   <artifactId>java-swing-main</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
+	<properties>
+		<java.version>21</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>21</maven.compiler.source>
+		<maven.compiler.target>21</maven.compiler.target>
+		<exec.mainClass>com.pro.Main</exec.mainClass>
+	</properties>
+
 	<dependencies>
 		<!-- lombok tambem precisa executar o jar para o eclipse-->
 		<dependency>
@@ -36,4 +44,22 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 		    <version>1.12.128</version>
 		</dependency>
 	</dependencies>
+
+	<build>
+	    <plugins>
+	        <!-- Plugin para gerar o arquivo JAR com o Manifesto -->
+	        <plugin>
+	            <groupId>org.apache.maven.plugins</groupId>
+	            <artifactId>maven-jar-plugin</artifactId>
+	            <version>3.1.0</version>
+	            <configuration>
+	                <archive>
+	                    <manifestEntries>
+	                        <Main-Class>com.pro.Main</Main-Class>
+	                    </manifestEntries>
+	                </archive>
+	            </configuration>
+	        </plugin>
+		</plugins>
+	</build>
 </project>
