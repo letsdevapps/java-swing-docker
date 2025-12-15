@@ -94,33 +94,33 @@ public class MenuConfiguration {
 
 		JMenuItem res800x600 = new JMenuItem("800 x 600");
 		res800x600.setFont(FontTools.getFontArialPlain20());
-        res800x600.addActionListener(e -> {
-        	jframe.setSize(800, 600);
-        	jframe.setLocationRelativeTo(null);
+		res800x600.addActionListener(e -> {
+			jframe.setSize(800, 600);
+			jframe.setLocationRelativeTo(null);
 		});
 
-        JMenuItem res1024x768 = new JMenuItem("1024 x 768");
+		JMenuItem res1024x768 = new JMenuItem("1024 x 768");
 		res1024x768.setFont(FontTools.getFontArialPlain20());
-        res1024x768.addActionListener(e -> {
-        	jframe.setSize(1024, 768);
-        	jframe.setLocationRelativeTo(null);
+		res1024x768.addActionListener(e -> {
+			jframe.setSize(1024, 768);
+			jframe.setLocationRelativeTo(null);
 		});
 
 		JMenuItem fullscreen = new JMenuItem("Tela Cheia");
-        fullscreen.setFont(FontTools.getFontArialPlain20());
-        fullscreen.addActionListener(e -> {
-			//JOptionPane.showMessageDialog(jframe, "Resolução | Tela Cheia");
-        	//jframe.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        	Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        	jframe.setSize(screenSize.width, screenSize.height);
+		fullscreen.setFont(FontTools.getFontArialPlain20());
+		fullscreen.addActionListener(e -> {
+			// JOptionPane.showMessageDialog(jframe, "Resolução | Tela Cheia");
+			// jframe.setExtendedState(JFrame.MAXIMIZED_BOTH);
+			Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+			jframe.setSize(screenSize.width, screenSize.height);
 		});
 
-        menu.add(res800x600);
-        menu.add(res1024x768);
-        menu.addSeparator();
-        menu.add(fullscreen);
+		menu.add(res800x600);
+		menu.add(res1024x768);
+		menu.addSeparator();
+		menu.add(fullscreen);
 
-        return menu;
+		return menu;
 	}
 
 	private JMenu locale() {
@@ -134,14 +134,14 @@ public class MenuConfiguration {
 		});
 		menu.add(item1);
 
-        JMenuItem item2 = new JMenuItem("Português");
-        item2.setFont(FontTools.getFontArialPlain20());
-        item2.addActionListener(e -> {
+		JMenuItem item2 = new JMenuItem("Português");
+		item2.setFont(FontTools.getFontArialPlain20());
+		item2.addActionListener(e -> {
 			JOptionPane.showMessageDialog(jframe, "Idioma | Português");
 		});
-        menu.add(item2);
+		menu.add(item2);
 
-        return menu;
+		return menu;
 	}
 
 	private JMenu setupMenuAbout() {
